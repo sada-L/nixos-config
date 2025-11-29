@@ -23,14 +23,9 @@
   virtualisation.libvirtd.enable = true;
 
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.allowUnfreePredicate =
-    pkg:
-    builtins.elem (lib.getName pkg) [
-      "zed"
-      "obsidian"
-    ];
 
   environment.systemPackages = with pkgs; [
+    obsidian
     kdePackages.okular
     rich-cli
     alsa-utils

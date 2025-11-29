@@ -1,8 +1,8 @@
 {
   programs.starship = {
     enable = true;
-    enableFishIntegration = true;
-    enableInteractive = true;
-    enableTransience = true;
+    # enableFishIntegration = true;
+    # enableInteractive = true;
+    # enableTransience = true;
   };
 }

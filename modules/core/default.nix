@@ -17,7 +17,7 @@
     # ./printing.nix
     ./security.nix
     ./services.nix
-    # ./starfish.nix
+    ./starfish.nix
     ./steam.nix
     # ./syncthing.nix
     ./system.nix

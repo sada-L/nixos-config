@@ -13,7 +13,7 @@ in
 {
   imports = [ inputs.home-manager.nixosModules.home-manager ];
 
-  programs.fish.enable = true;
+  # programs.fish.enable = true;
 
   home-manager = {
     useUserPackages = true;
@@ -33,7 +33,7 @@ in
       home = {
         username = "${username}";
         homeDirectory = "/home/${username}";
-        stateVersion = "23.11";
+        stateVersion = "25.05";
       };
     };
   };
@@ -52,8 +52,8 @@ in
       "wheel" # sudo access
       "vboxusers" # For VirtualBox
     ];
-    shell = pkgs.fish;
-    ignoreShellProgramCheck = true;
+    # shell = pkgs.fish;
+    # ignoreShellProgramCheck = true;
   };
   nix.settings.allowed-users = [ "${username}" ];
 }

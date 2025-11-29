@@ -116,29 +116,12 @@
         "type": "github"
       }
     },
-    "rich-cli": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1763020975,
-        "narHash": "sha256-oHZSi9pUemRWiFAp2ol6vbXkQIB9aVWW0v1RJnEex1I=",
-        "owner": "Textualize",
-        "repo": "rich-cli",
-        "rev": "36b4229780bb993ae45fd77cb8234c4ca574f782",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Textualize",
-        "repo": "rich-cli",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "dankMaterialShell": "dankMaterialShell",
         "dgop": "dgop",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
-        "rich-cli": "rich-cli",
         "zen-browser": "zen-browser"
       }
     },

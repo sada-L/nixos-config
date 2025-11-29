@@ -34,7 +34,7 @@
     ZANEYOS = "true";
   };
   console.keyMap = "us";
-  system.stateVersion = "23.11"; # Do not change!
+  system.stateVersion = "25.05"; # Do not change!
 
   # Enable nix-ld for running unpackaged programs like adb
   programs.nix-ld.enable = true;

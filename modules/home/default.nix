@@ -12,7 +12,7 @@
     ./emoji.nix
     ./eza.nix
     ./fish
-    ./fish/fishrc-personal.nix
+    # ./fish/fishrc-personal.nix
     ./fzf.nix
     ./gh.nix
     ./git.nix
