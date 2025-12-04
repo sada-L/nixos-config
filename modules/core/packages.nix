@@ -1,8 +1,5 @@
 {
   pkgs,
-  lib,
-  zen-browser,
-  host,
   ...
 }:
 {
@@ -25,7 +22,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    obsidian
+    blender-hip
     kdePackages.okular
     rich-cli
     alsa-utils
@@ -42,6 +39,7 @@
     gdu # graphical disk usage
     gedit # Simple Graphical Text Editor
     gimp # Great Photo Editor
+    gnumake
     # glxinfo # Needed for inxi -G GPU info
     mesa-demos
     gping # graphical ping
@@ -82,11 +80,11 @@
     nwg-drawer # drawer GUI
     nwg-look # Look GUI
     rofi-emoji # rofi-emoji-wayland merged into rofi-emoji in nixpkgs-unstable
-    zen-browser # Default browser
     popsicle
     gum
-    gtk3
-    gtk4
+    # gtk3
+    # gtk4
+    xdg-user-dirs
     localsend
   ];
 }

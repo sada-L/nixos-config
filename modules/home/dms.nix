@@ -1,5 +1,6 @@
 {
   inputs,
+  system,
   ...
 }:
 {
@@ -18,6 +19,8 @@
     enableAudioWavelength = true;
     enableCalendarEvents = true;
     enableSystemSound = true;
+
+    quickshell.package = inputs.quickshell.packages.${system}.default;
 
     systemd = {
       enable = true;

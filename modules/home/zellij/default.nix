@@ -1,8 +1,11 @@
 {
+  imports = [
+    ./layouts.nix
+  ];
+
   programs.zellij = {
     enable = true;
-    enableFishIntegration = true;
-    exitShellOnExit = true;
+    exitShellOnExit = false;
     settings = {
       default_mode = "locked";
       default_shell = "fish";
@@ -23,7 +26,7 @@
       };
 
       keybinds._props.clear-default = true;
-      keybinds.locked = [
+      keybinds.locked._children = [
         {
           bind = {
             _args = [ "Ctrl h" ];

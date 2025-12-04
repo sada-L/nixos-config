@@ -81,7 +81,10 @@ in
       MOZ_ENABLE_WAYLAND "1"
       QT_QPA_PLATFORM "wayland"
       ELECTRON_OZONE_PLATFORM_HINT "wayland"
+      QT_QPA_PLATFORMTHEME "gtk3"
+      QT_QPA_PLATFORMTHEME_QT6 "gtk3"
       TERMINAL "${terminal}"
+      XCURSOR_THEME "Bibata-Modern-Ice"
       XCURSOR_SIZE "24"
 
       // NVIDIA Gaming Optimizations

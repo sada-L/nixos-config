@@ -4,6 +4,7 @@
   username,
   host,
   profile,
+  system,
   ...
 }:
 let
@@ -13,11 +14,11 @@ in
 {
   imports = [ inputs.home-manager.nixosModules.home-manager ];
 
-  # programs.fish.enable = true;
+  programs.fish.enable = true;
 
   home-manager = {
     useUserPackages = true;
-    useGlobalPkgs = false;
+    useGlobalPkgs = true;
     backupFileExtension = "backup";
     extraSpecialArgs = {
       inherit
@@ -25,6 +26,7 @@ in
         username
         host
         profile
+        system
         ;
     };
 
@@ -52,8 +54,8 @@ in
       "wheel" # sudo access
       "vboxusers" # For VirtualBox
     ];
-    # shell = pkgs.fish;
-    # ignoreShellProgramCheck = true;
+    shell = pkgs.fish;
+    ignoreShellProgramCheck = true;
   };
   nix.settings.allowed-users = [ "${username}" ];
 }

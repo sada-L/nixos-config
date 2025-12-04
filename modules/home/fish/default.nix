@@ -88,6 +88,9 @@
 
       # Always mkdir with parents
       mkdir = "mkdir -p";
+
+      ef = "zellij --layout ~/.config/zellij/dev.kdl";
+      er = "br && ef";
     };
 
     # Fish plugins for enhanced functionality

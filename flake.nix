@@ -9,7 +9,23 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake/beta";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        home-manager.follows = "home-manager";
+      };
+    };
+
+    quickshell = {
+      url = "github:quickshell-mirror/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     dgop = {
       url = "github:AvengeMedia/dgop";
@@ -41,10 +57,14 @@
             host = hostname;
             inherit profile;
             inherit username;
-            zen-browser = inputs.zen-browser.packages.${system}.default;
+            inherit system;
           };
           modules = [
             ./profiles/${profile}
+
+            {
+              nixpkgs.overlays = [ inputs.niri.overlays.niri ];
+            }
           ];
         };
     in
