@@ -84,7 +84,6 @@
     gum
     # gtk3
     # gtk4
-    xdg-user-dirs
     localsend
   ];
 }

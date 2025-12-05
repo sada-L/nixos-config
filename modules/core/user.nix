@@ -35,6 +35,7 @@ in
       home = {
         username = "${username}";
         homeDirectory = "/home/${username}";
+        preferXdgDirectories = true;
         stateVersion = "25.05";
       };
     };

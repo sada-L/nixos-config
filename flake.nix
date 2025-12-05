@@ -75,6 +75,11 @@
           profile = "amd";
           username = "sada";
         };
+        homie = {
+          hostname = "homie";
+          profile = "nvidia";
+          username = "sada";
+        };
       };
     };
 }

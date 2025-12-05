@@ -18,7 +18,9 @@
         "application/x-extension-xht" = "zen-beta.desktop";
       };
     };
-    # Portal configuration moved to system-level (modules/core/flatpak.nix)
-    # to avoid package collisions between stable and unstable
+    userDirs = {
+      enable = true;
+      createDirectories = true;
+    };
   };
 }
