@@ -1,6 +1,7 @@
 {
   terminal,
   hostKeybinds ? "",
+  browser,
   ...
 }:
 let
@@ -67,7 +68,7 @@ in
       // === Application Launchers ===
       Mod+Return { spawn "${terminal}"; }
       Mod+E { spawn-sh "${terminal} -e yazi"; }
-      Mod+B { spawn "zen"; }
+      Mod+B { spawn "${browser}"; }
       Mod+T { spawn "Telegram"; }
 
       ${dmsKeybinds}

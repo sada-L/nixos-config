@@ -6,6 +6,7 @@
 }:
 let
   terminal = "footclient";
+  browser = "zen-beta";
 
   # Try to import host-specific keybinds, fallback to empty if doesn't exist
   hostKeybindsPath = ./hosts/${host}/keybinds.nix;
@@ -18,17 +19,14 @@ let
       host
       hostKeybinds
       terminal
+      browser
       config
       ;
   };
 
   windowrulesModule = import ./windowrules.nix { inherit host; };
   layoutModule = import ./layout.nix { };
-  startupModule = import ./startup.nix {
-    inherit
-      host
-      ;
-  };
+  startupModule = import ./startup.nix { inherit host; };
 
   # Try to import host-specific outputs, fallback to empty if doesn't exist
   hostOutputsPath = ./hosts/${host}/outputs.nix;
@@ -82,7 +80,7 @@ in
       QT_QPA_PLATFORM "wayland"
       ELECTRON_OZONE_PLATFORM_HINT "wayland"
       TERMINAL "${terminal}"
-      XCURSOR_SIZE "24"
+      XCURSOR_SIZE "15"
 
       // NVIDIA Gaming Optimizations
       __GL_GSYNC_ALLOWED "1"

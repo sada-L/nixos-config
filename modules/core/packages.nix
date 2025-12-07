@@ -1,4 +1,5 @@
 {
+  inputs,
   pkgs,
   ...
 }:
@@ -22,6 +23,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    inputs.gitlogue.packages.${system}.default
     blender-hip
     kdePackages.okular
     rich-cli
@@ -76,9 +78,6 @@
     wget # Tool For Fetching Files With Links
     xwayland-satellite # Xwayland outside your Wayland compositor
     ytmdl # Tool For Downloading Audio From YouTube
-    nwg-displays # Manage Displays
-    nwg-drawer # drawer GUI
-    nwg-look # Look GUI
     rofi-emoji # rofi-emoji-wayland merged into rofi-emoji in nixpkgs-unstable
     popsicle
     gum

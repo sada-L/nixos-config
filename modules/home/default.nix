@@ -1,7 +1,6 @@
 { ... }:
 {
   imports = [
-    ./alacritty.nix
     ./bash.nix
     ./bashrc-personal.nix
     ./bat.nix
@@ -12,16 +11,13 @@
     ./emoji.nix
     ./eza.nix
     ./fish
-    # ./fish/fishrc-personal.nix
     ./foot.nix
     ./fzf.nix
-    ./gh.nix
     ./git.nix
     ./gtk.nix
     ./helix.nix
     ./lazygit.nix
     ./niri
-    ./nwg-drawer.nix
     ./obsidian.nix
     ./obs-studio.nix
     ./qt.nix
@@ -35,7 +31,6 @@
     ./zoxide.nix
     ./environment.nix
     ./zellij
-    # ./zen-browser.nix
     ./zen.nix
   ];
 }

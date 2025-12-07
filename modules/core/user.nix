@@ -37,6 +37,13 @@ in
         homeDirectory = "/home/${username}";
         preferXdgDirectories = true;
         stateVersion = "25.05";
+        pointerCursor = {
+          package = pkgs.catppuccin-cursors.mochaDark;
+          name = "catppuccin-mocha-dark-cursors";
+          size = 24;
+          gtk.enable = true;
+          x11.enable = true;
+        };
       };
     };
   };

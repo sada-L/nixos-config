@@ -37,6 +37,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.dgop.follows = "dgop";
     };
+
+    gitlogue.url = "github:unhappychoice/gitlogue";
   };
 
   outputs =
@@ -75,7 +77,7 @@
           profile = "amd";
           username = "sada";
         };
-        homie = {
+        homie = mkHost {
           hostname = "homie";
           profile = "nvidia";
           username = "sada";

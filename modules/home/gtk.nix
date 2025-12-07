@@ -12,6 +12,11 @@
       name = "Orchis-Grey-Dark";
     };
 
+    # cursorTheme = {
+    #   name = "Vanilla-DMZ";
+    #   size = 15;
+    # };
+
     colorScheme = "dark";
   };
 }

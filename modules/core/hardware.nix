@@ -15,20 +15,6 @@
     bluetooth.powerOnBoot = true;
   };
 
-  hardware.opengl = {
-    enable = true;
-  };
-
-  hardware.opengl.extraPackages = with pkgs; [
-    rocmPackages.clr.icd # или это для AMD
-  ];
-
-  environment.systemPackages = with pkgs; [
-    vulkan-tools
-    vulkan-loader
-    vulkan-validation-layers
-  ];
-
   # Udev rules for Corsair devices
   services.udev.extraRules = ''
     # Corsair devices
