@@ -24,6 +24,7 @@
 
   environment.systemPackages = with pkgs; [
     inputs.gitlogue.packages.${system}.default
+    motrix
     blender-hip
     kdePackages.okular
     rich-cli

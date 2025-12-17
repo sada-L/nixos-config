@@ -7,6 +7,7 @@
 }:
 {
   home.packages = [
+    (import ./terminal-cwd.nix { inherit pkgs; })
     (import ./emopicker9000.nix { inherit pkgs; })
     (import ./keybinds.nix { inherit pkgs; })
     (import ./task-waybar.nix { inherit pkgs; })

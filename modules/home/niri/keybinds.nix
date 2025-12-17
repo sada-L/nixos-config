@@ -67,6 +67,7 @@ in
 
       // === Application Launchers ===
       Mod+Return { spawn "${terminal}"; }
+      Mod+Shift+Return { spawn-sh "${terminal} -D $(terminal-cwd)"; }
       Mod+E { spawn-sh "${terminal} -e yazi"; }
       Mod+B { spawn "${browser}"; }
       Mod+T { spawn "Telegram"; }

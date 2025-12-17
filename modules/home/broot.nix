@@ -17,11 +17,11 @@ in
     enableFishIntegration = true;
     settings = {
       modal = true;
-      default_flags = "-g --sort-by-type";
+      default_flags = "-g --sort-by-type --max-depth 2";
       show_selection_mark = true;
       icon_theme = "nerdfont";
       special_paths = {
-        "./.git" = {
+        "/.git" = {
           show = "never";
           list = "never";
           sum = "never";

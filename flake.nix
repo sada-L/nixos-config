@@ -9,6 +9,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake/beta";
       inputs = {
@@ -65,7 +70,10 @@
             ./profiles/${profile}
 
             {
-              nixpkgs.overlays = [ inputs.niri.overlays.niri ];
+              nixpkgs.overlays = [
+                inputs.niri.overlays.niri
+                inputs.nur.overlays.default
+              ];
             }
           ];
         };
