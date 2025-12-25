@@ -15,7 +15,13 @@
     gcc
     nil
     nixfmt-rfc-style
+    markdown-oxide
+    codebook
   ];
+
+  home.file.".config/codebook/codebook.toml".text = ''
+    dictionaries = [ "en_us", "ru" ]
+  '';
 
   programs.helix = {
     enable = true;
@@ -42,6 +48,11 @@
           normal = "block";
           insert = "bar";
           select = "underline";
+        };
+
+        soft-wrap = {
+          enable = false;
+          wrap-indicator = "";
         };
 
         indent-guides = {
@@ -116,6 +127,21 @@
 
     languages = {
       language = [
+        {
+          name = "markdown";
+          scope = "source.md";
+          injection-regex = "md|markdown";
+          file-types = [ "md" ];
+          language-servers = [
+            "markdown-oxide"
+            "scls"
+            "codebook"
+          ];
+          indent = {
+            tab-width = 4;
+            unit = "    ";
+          };
+        }
         {
           name = "rust";
           scope = "source.rust";
@@ -215,6 +241,13 @@
       ];
 
       language-server = {
+        codebook = {
+          command = "codebook-lsp";
+          args = [ "serve" ];
+        };
+        markdown-oxide = {
+          command = "markdown-oxide";
+        };
         rust-analyzer = {
           command = "rust-analyzer";
           config = {

@@ -16,6 +16,7 @@
     ./git.nix
     ./gtk.nix
     ./helix.nix
+    ./lutris.nix
     ./lazygit.nix
     ./niri
     ./obsidian.nix

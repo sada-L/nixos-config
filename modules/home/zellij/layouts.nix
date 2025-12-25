@@ -11,7 +11,7 @@
         pane split_direction="vertical" {
             pane split_direction="horizontal" {
                 pane split_direction="vertical" {
-                    pane size="25%" command="broot" {
+                    pane size="20%" command="broot" {
                         args "--conf" "${config.home.homeDirectory}/.config/broot/conf.hjson"
                     }
                     pane command="hx"

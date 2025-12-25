@@ -37,5 +37,6 @@
   # System-level packages
   environment.systemPackages = with pkgs; [
     mangohud
+    wineWow64Packages.stagingFull
   ];
 }

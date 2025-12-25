@@ -74,6 +74,7 @@
     sox # audio support for FFMPEG
     unrar # Tool For Handling .rar Files
     unzip # Tool For Handling .zip Files
+    p7zip
     usbutils # Good Tools For USB Devices
     v4l-utils # Used For Things Like OBS Virtual Camera
     wget # Tool For Fetching Files With Links
