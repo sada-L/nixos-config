@@ -24,6 +24,10 @@
 
   environment.systemPackages = with pkgs; [
     inputs.gitlogue.packages.${system}.default
+    dig
+    fastfetch
+    super-productivity
+    go-swag
     motrix
     blender-hip
     kdePackages.okular

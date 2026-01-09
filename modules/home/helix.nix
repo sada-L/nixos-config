@@ -17,6 +17,12 @@
     nixfmt-rfc-style
     markdown-oxide
     codebook
+    vscode-langservers-extracted
+    prettier
+    shfmt
+    bash-language-server
+    docker-compose-language-service
+    dockerfile-language-server
   ];
 
   home.file.".config/codebook/codebook.toml".text = ''
@@ -127,6 +133,55 @@
 
     languages = {
       language = [
+        {
+          name = "bash";
+          auto-format = true;
+          formatter = {
+            command = "shfmt";
+          };
+        }
+        {
+          name = "json";
+          language-servers = [
+            "vscode-json-language-server"
+            "scls"
+          ];
+          formatter = {
+            command = "prettier";
+            args = [
+              "--parser"
+              "json"
+            ];
+          };
+        }
+        {
+          name = "css";
+          language-servers = [
+            "vscode-css-language-server"
+            "scls"
+          ];
+          formatter = {
+            command = "prettier";
+            args = [
+              "--parser"
+              "css"
+            ];
+          };
+        }
+        {
+          name = "html";
+          language-servers = [
+            "vscode-html-language-server"
+            "scls"
+          ];
+          formatter = {
+            command = "prettier";
+            args = [
+              "--parser"
+              "html"
+            ];
+          };
+        }
         {
           name = "markdown";
           scope = "source.md";
