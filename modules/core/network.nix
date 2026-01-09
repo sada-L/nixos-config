@@ -1,5 +1,4 @@
 {
-  pkgs,
   host,
   options,
   ...
@@ -20,9 +19,15 @@
         8080
       ];
       allowedUDPPorts = [
+        51820
         59010
         59011
       ];
+    };
+    nat = {
+      enable = true;
+      externalInterface = "eth0";
+      internalInterfaces = [ "wg0" ];
     };
   };
 
