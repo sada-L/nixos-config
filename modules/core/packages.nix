@@ -24,6 +24,9 @@
 
   environment.systemPackages = with pkgs; [
     inputs.gitlogue.packages.${system}.default
+    dbeaver-bin
+    jetbrains-toolbox
+    sqlitebrowser
     dig
     fastfetch
     super-productivity
