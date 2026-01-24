@@ -24,9 +24,14 @@
 
   environment.systemPackages = with pkgs; [
     inputs.gitlogue.packages.${system}.default
+<<<<<<< HEAD
     dbeaver-bin
     jetbrains-toolbox
     sqlitebrowser
+||||||| parent of 520c400 (Sat Jan 24 01:43:15 PM MSK 2026)
+=======
+    dbeaver-bin
+>>>>>>> 520c400 (Sat Jan 24 01:43:15 PM MSK 2026)
     dig
     fastfetch
     super-productivity
