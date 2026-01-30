@@ -66,7 +66,7 @@
         DisablePocket = true; # save webs for later reading
         DisableTelemetry = true;
         DontCheckDefaultBrowser = true;
-        OfferToSaveLogins = false;
+        OfferToSaveLogins = true;
         EnableTrackingProtection = {
           Value = true;
           Locked = true;
