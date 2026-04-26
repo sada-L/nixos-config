@@ -10,13 +10,14 @@
     ./dms.nix
     ./emoji.nix
     ./eza.nix
+    # ./emacs.nix
     ./fish
     ./foot.nix
     ./fzf.nix
     ./git.nix
     ./gtk.nix
     ./helix.nix
-    ./lutris.nix
+    # ./lutris.nix
     ./lazygit.nix
     ./niri
     ./obsidian.nix
@@ -32,6 +33,6 @@
     ./zoxide.nix
     ./environment.nix
     ./zellij
-    ./zen.nix
+    # ./zen.nix
   ];
 }

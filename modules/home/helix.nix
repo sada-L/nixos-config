@@ -8,13 +8,13 @@
     rustup
     simple-completion-language-server
     go
-    gopls
-    gotools
+    # gopls
+    # gotools
     gomodifytags
     gotestsum
     gcc
     nil
-    nixfmt-rfc-style
+    nixfmt
     markdown-oxide
     codebook
     vscode-langservers-extracted
@@ -23,6 +23,9 @@
     bash-language-server
     docker-compose-language-service
     dockerfile-language-server
+    yamllint
+    ansible-lint
+    yaml-language-server
   ];
 
   home.file.".config/codebook/codebook.toml".text = ''
@@ -256,7 +259,7 @@
             unit = " ";
           };
           formatter = {
-            command = lib.getExe pkgs.nixfmt-rfc-style;
+            command = lib.getExe pkgs.nixfmt;
           };
         }
         {

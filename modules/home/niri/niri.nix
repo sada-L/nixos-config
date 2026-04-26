@@ -48,7 +48,7 @@ in
     niri
     udiskie
     xwayland-satellite
-    swww
+    awww
     grim
     slurp
     wl-clipboard

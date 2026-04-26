@@ -10,7 +10,7 @@
     hyprlock.enable = true; # Resolve pam issue, can be disabled per-host via enableHyprlock
     fuse.userAllowOther = true;
     mtr.enable = true;
-    adb.enable = true;
+    nix-ld.enable = true;
     gnupg.agent = {
       enable = true;
       enableSSHSupport = true;
@@ -24,13 +24,17 @@
 
   environment.systemPackages = with pkgs; [
     inputs.gitlogue.packages.${system}.default
+    ollama
+    opencode
+    onlyoffice-desktopeditors
+    fd
+    ansible
     jetbrains-toolbox
     dig
     fastfetch
     super-productivity
     go-swag
     motrix
-    blender-hip
     kdePackages.okular
     rich-cli
     alsa-utils
@@ -46,7 +50,6 @@
     file-roller # Archive Manager
     gdu # graphical disk usage
     gedit # Simple Graphical Text Editor
-    gimp # Great Photo Editor
     gnumake
     # glxinfo # Needed for inxi -G GPU info
     mesa-demos

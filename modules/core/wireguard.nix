@@ -1,17 +1,26 @@
 { ... }:
 {
+  networking.wireguard.enable = true;
+
   networking.wg-quick.interfaces = {
     wg0 = {
-      address = [ "10.134.233.206/32" ];
-      # dns = [ "" ];
-      privateKey = "4NIg+NLBOF7CtnS09T8siRqiMuwS75W21ode2B1dc0Q=";
+      address = [ "10.191.226.110/19" ];
+      dns = [
+        "9.9.9.9"
+        "149.112.112.112"
+      ];
+
+      privateKey = "yEiteFWNSw5TIEoN7yeYm825kCsXj1ukaX3QwiWi7HM=";
       peers = [
         {
-          publicKey = "44pm4MjsnZK1r+JzdG1D6pA1Nw1eC0PMpIkfzoSsaw0=";
-          # presharedKeyFile = "";
-          allowedIPs = [ "0.0.0.0/0" ];
-          endpoint = "146.70.42.235:51820";
-          persistentKeepalive = 10;
+          publicKey = "L3uTfoIBkb7zfZcbbptdsv3aFfGsa7zS2Oabmwz3Ji4=";
+          presharedKey = "hidzbSxE3Ax4SKO9q0IOsK9i/T9bwZ0y7/2Uoz5n+lQ=";
+          endpoint = "93.115.203.142:443";
+          allowedIPs = [
+            "0.0.0.0/0"
+            "::/0"
+          ];
+          persistentKeepalive = 25;
         }
       ];
     };

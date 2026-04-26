@@ -3,6 +3,7 @@
   programs.yazi = {
     enable = true;
     enableFishIntegration = true;
+    shellWrapperName = "yy";
     plugins = {
       rich-preview = pkgs.yaziPlugins.rich-preview;
     };

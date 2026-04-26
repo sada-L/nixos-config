@@ -5,22 +5,22 @@
 }:
 {
   imports = [
-    inputs.dankMaterialShell.homeModules.dankMaterialShell.default
+    inputs.dankMaterialShell.homeModules.dank-material-shell
   ];
 
-  programs.dankMaterialShell = {
+  programs.dank-material-shell = {
     enable = true;
     enableSystemMonitoring = true;
-    enableClipboard = true;
+    # enableClipboard = true;
     enableVPN = true;
-    enableBrightnessControl = true;
-    enableColorPicker = true;
+    # enableBrightnessControl = true;
+    # enableColorPicker = true;
     enableDynamicTheming = true;
     enableAudioWavelength = true;
     enableCalendarEvents = true;
-    enableSystemSound = true;
+    # enableSystemSound = true;
 
-    quickshell.package = inputs.quickshell.packages.${system}.default;
+    # quickshell.package = inputs.quickshell.packages.${system}.default;
 
     systemd = {
       enable = true;
