@@ -9,7 +9,7 @@
         login-shell = "no";
         font = "JetBrainsMonoNerdFont:size=15";
       };
-      colors = {
+      colors-dark = {
         foreground = "c0caf5";
         background = "1a1b26";
         regular0 = "15161E"; # black

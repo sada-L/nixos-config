@@ -33,6 +33,6 @@
     ./zoxide.nix
     ./environment.nix
     ./zellij
-    # ./zen.nix
+    ./zen.nix
   ];
 }
