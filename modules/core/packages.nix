@@ -1,5 +1,4 @@
 {
-  inputs,
   pkgs,
   ...
 }:
@@ -23,9 +22,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    inputs.gitlogue.packages.${system}.default
-    ollama
-    opencode
+    dbeaver-bin
     onlyoffice-desktopeditors
     fd
     ansible

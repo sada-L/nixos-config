@@ -5,7 +5,12 @@
 }:
 {
   home.packages = with pkgs; [
-    rustup
+    cargo
+    rustc
+    rustfmt
+    rust-analyzer
+    lldb
+    clippy
     simple-completion-language-server
     go
     # gopls
@@ -309,16 +314,220 @@
         rust-analyzer = {
           command = "rust-analyzer";
           config = {
-            inlayHints = {
-              bindingModeHints.enable = true;
-              closingBraceHints.minLines = 10;
-              closureReturnTypeHints.enable = "with_block";
-              discriminantHints.enable = "fieldless";
-              lifetimeElisionHints.enable = "skip_trivial";
-              typeHints.hideClosureInitialization = false;
-            };
+            # assist.insertUse.autoimport = true;
+            # assist.writeImplInTee = false;
+            # assist.importStyle = "self";
+            # assist.importGroup = true;
+            # assist.importGranularity = "crate";
+            # assist.expressionFillDefault = "todo";
+            # assist.todoTerms = [
+            #   "todo!"
+            #   "FIXME"
+            #   "HACK"
+            #   "NOTE"
+            #   "XXX"
+            # ];
+
+            # cachePriming.enable = true;
+            # cachePriming.numThreads = 4;
+
+            # checkOnSave = true;
+            # check.command = "clippy";
+            # check.features = "all";
+            # check.allTargets = true;
+            # check.workspace = true;
+            # check.ignore = [ "unused_variables" ];
+            # check.invalidation.enable = true;
+            # check.invalidation.unify = true;
+
+            # diagnostics.enable = true;
+            # diagnostics.experimental.enable = true;
+            # diagnostics.warningsAsHint = [
+            #   "unused"
+            #   "dead_code"
+            # ];
+            # diagnostics.warningsAsInfo = [ "deprecated" ];
+            # diagnostics.disabled = [
+            #   "inactive-code"
+            #   "unlinked-file"
+            # ];
+            # diagnostics.includeUnstableApi = false;
+            # diagnostics.displayStyle = "link";
+
+            # rustfmt.extraArgs = [
+            #   "--edition"
+            #   "2021"
+            # ];
+            # rustfmt.rangeFormatting.enable = true;
+
+            # semanticHighlighting.enable = true;
+            # semanticHighlighting.strings.enable = true;
+            # semanticHighlighting.punctuation.enable = true;
+            # semanticHighlighting.punctuation.separate.macro = true;
+            # semanticHighlighting.operator.enable = true;
+            # semanticHighlighting.operator.specialization.enable = true;
+            # semanticHighlighting.unused.enable = true;
+
+            # inlayHints.enable = true;
+            # inlayHints.typeHints.enable = true;
+            # inlayHints.typeHints.hideClosureInitialization = false;
+            # inlayHints.typeHints.hideNamedConstructor = false;
+            # inlayHints.typeHints.hideForTraitImpl = false;
+            # inlayHints.parameterHints.enable = true;
+            # inlayHints.parameterHints.hideEnabled = false;
+            # inlayHints.closureCaptureHints.enable = true;
+            # inlayHints.chainingHints.enable = true;
+            # inlayHints.discriminantHints.enable = "always";
+            # inlayHints.bindingModeHints.enable = true;
+            # inlayHints.lifetimeElisionHints.enable = "never";
+            # inlayHints.genericParameterHints.enable = true;
+            # inlayHints.genericParameterHints.const.enable = true;
+            # inlayHints.genericParameterHints.lifetime.enable = true;
+            # inlayHints.genericParameterHints.type.enable = true;
+            # inlayHints.implicitDrops.enable = false;
+            # inlayHints.expressionAdjustmentHints.enable = "never";
+            # inlayHints.reborrowHints.enable = "never";
+
+            completion.enable = true;
+            # completion.autoimport.enable = true;
+            # completion.postfix.enable = true;
+            # completion.addCallParenthesis = true;
+            # completion.addCallArgumentSnippets = true;
+            completion.callable.snippets = "add_parentheses";
+            # completion.fullDocumentation = true;
+            # completion.parameterLabels = false;
+            # completion.snippets.custom = { };
+            # completion.enableInStrings = false;
+            # completion.enableInComments = false;
+
+            # fold.enable = true;
+            # fold.level = 1;
+            # fold.limit = 30;
+
+            # highlightRelated.enable = true;
+            # highlightRelated.breakPoints.enable = true;
+            # highlightRelated.exitPoints.enable = true;
+            # highlightRelated.yieldPoints.enable = true;
+            # highlightRelated.references.enable = true;
+            # highlightRelated.implBlocks.enable = true;
+            # highlightRelated.traitImpls.enable = true;
+
+            # hover.enable = true;
+            # hover.documentation.enable = true;
+            # hover.links.enable = true;
+            # hover.linksInHover = true;
+            # hover.show = "documentation";
+            # hover.debugInfo.enable = false;
+
+            # hover.actions.enable = true;
+            # hover.actions.debug.enable = false;
+            # hover.actions.gotoTypeDef.enable = true;
+            # hover.actions.implementations.enable = true;
+            # hover.actions.references.enable = false;
+            # hover.actions.run.enable = true;
+
+            # procMacro.enable = true;
+            # procMacro.ignore = [ ];
+            # procMacro.attributes.enable = true;
+            # procMacro.sysroot.enable = true;
+
+            # interpreter.enable = true;
+
+            # cargo.buildScripts.enable = true;
+            # cargo.autoreload = true;
+            # cargo.loadOutDirsFromCheck = true;
+            # cargo.noDefaultFeatures = false;
+            # cargo.allFeatures = false;
+            # cargo.features = [ ];
+
+            # runnables.enable = true;
+            # runnables.extraArgs = [ ];
+            # snippet.completion.enable = true;
+            # sysroot.discover = true;
+            # workspace.discoverProject = {
+            #   enable = true;
+            #   maxDepth = 15;
+            #   maxFiles = 10000;
+            # };
+            # workspace.cargoFallback = true;
+            # callInfo.full = true;
+            # callInfo.implements = true;
+            # formatStrings.enable = true;
+            # relatedInformation = true;
+            # restartServerOnConfigChange = true;
+            # showRequestFailed = true;
+            # fileSource = "auto";
+            # trace.server = "off";
+            # experimental = {
+            #   cacheWarmup.enable = true;
+            #   externSource.enable = true;
+            #   termSearch.enable = true;
+            #   memoryUsage.enable = true;
+            #   lifetimeElision.enable = true;
+            #   insertUse.autoimport = true;
+            # };
           };
         };
+        # rust-analyzer = {
+        #   command = lib.getExe pkgs.rust-analyzer;
+        #   config = {
+        #     check = {
+        #       command = "clippy";
+        #       extraArgs = [
+        #         "--all-targets"
+        #         "--all-features"
+        #       ];
+        #     };
+        #     cargo = {
+        #       allFeatures = true;
+        #       noDefaultFeatures = false;
+        #     };
+        #     diagnostics = {
+        #       enable = true;
+        #       styleLints.enable = true;
+        #       warningsAsHint = [
+        #         "unused_variables"
+        #         "dead_code"
+        #       ];
+        #     };
+        #     inlayHints = {
+        #       bindingModeHints.enable = true;
+        #       closingBraceHints.minLines = 10;
+        #       closureReturnTypeHints.enable = "with_block";
+        #       discriminantHints.enable = "fieldless";
+        #       lifetimeElisionHints.enable = "skip_trivial";
+        #       typeHints.hideClosureInitialization = false;
+        #     };
+        #     procMacro.enable = true;
+        #     rustfmt.extraArgs = [ "+nightly" ];
+        # completion = {
+        #   snippets = {
+        #     custom = {
+        #       # Пример кастомного сниппета
+        #       context = {
+        #         postfix = "context";
+        #         body = "c!($\{receiver})";
+        #         description = "Wrap the expression in a c!";
+        #         scope = "expr";
+        #       };
+        #     };
+        #   };
+        # };
+        #   };
+        # };
+        # rust-analyzer = {
+        #   command = "rust-analyzer";
+        #   config = {
+        #     inlayHints = {
+        #       bindingModeHints.enable = true;
+        #       closingBraceHints.minLines = 10;
+        #       closureReturnTypeHints.enable = "with_block";
+        #       discriminantHints.enable = "fieldless";
+        #       lifetimeElisionHints.enable = "skip_trivial";
+        #       typeHints.hideClosureInitialization = false;
+        #     };
+        #   };
+        # };
         nix = {
           command = "nil";
           args = [ "--stdio" ];
