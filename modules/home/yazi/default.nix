@@ -17,14 +17,23 @@ in
       full-border = pkgs.yaziPlugins.full-border;
       git = pkgs.yaziPlugins.git;
       smart-enter = pkgs.yaziPlugins.smart-enter;
+      gvfs = pkgs.yaziPlugins.gvfs;
     };
 
-    initLua = ''
-      require("full-border"):setup()
-         require("git"):setup()
-         require("smart-enter"):setup {
-           open_multi = true,
-         }
+    initLua = pkgs.writeText "init.lua" ''
+      require("gvfs"):setup({
+        -- Базовая настройка, обычно она пустая или содержит параметры
+        -- Если не нужны опции, оставляем пустые скобки
+      })
     '';
+
+    # initLua = ''
+    #   require("full-border"):setup()
+
+    #      require("git"):setup()
+    #      require("smart-enter"):setup {
+    #        open_multi = true,
+    #      }
+    # '';
   };
 }

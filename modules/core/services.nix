@@ -11,10 +11,16 @@
     gnome.gnome-keyring.enable = true;
     upower.enable = true; # Power management (required for DMS battery monitoring)
 
+    displayManager.dms-greeter = {
+      enable = true;
+      compositor.name = "niri"; # Or "hyprland" or "sway"
+    };
+
     smartd = {
       enable = if profile == "vm" then false else true;
       autodetect = true;
     };
+
     pipewire = {
       enable = true;
       alsa.enable = true;

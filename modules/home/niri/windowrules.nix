@@ -5,6 +5,13 @@
       geometry-corner-radius 9
       clip-to-geometry true
       draw-border-with-background false
+
+      background-effect {
+          xray true
+          blur true
+          noise 0.01
+          saturation 1
+      }
   }
 
   // Opacity rules for specific applications
