@@ -91,6 +91,7 @@
     # Документы и офис
     kdePackages.okular # Универсальный просмотрщик документов
     onlyoffice-desktopeditors # Офисный пакет для документов и таблиц
+    zathura
 
     # Коммуникации
     telegram-desktop # Мессенджер Telegram

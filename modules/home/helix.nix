@@ -17,7 +17,7 @@
     # gotools
     gomodifytags
     gotestsum
-    gcc
+    # gcc
     nil
     nixfmt
     markdown-oxide
@@ -300,6 +300,13 @@
           roots = [ ];
           auto-format = false;
           language-servers = [ "scls" ];
+        }
+        {
+          name = "c";
+          auto-format = true;
+          formatter = {
+            command = "clang-format";
+          };
         }
       ];
 

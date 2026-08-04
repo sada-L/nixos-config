@@ -5,7 +5,7 @@
   ...
 }:
 let
-  terminal = "footclient";
+  terminal = "ghostty";
   browser = "zen-beta";
 
   # Try to import host-specific keybinds, fallback to empty if doesn't exist
