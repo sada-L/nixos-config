@@ -17,7 +17,7 @@
     ./thunar.nix
     ./user.nix
     ./virtualisation.nix
-    ./wireguard.nix
+    # ./wireguard.nix
     ./xserver.nix
   ];
 }

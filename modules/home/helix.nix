@@ -5,6 +5,7 @@
 }:
 {
   home.packages = with pkgs; [
+    gdb
     cargo
     rustc
     rustfmt
@@ -588,6 +589,16 @@
     themes = {
       my_theme = {
         "inherits" = "tokyonight_moon";
+        "ui.background" = {
+          bg = "default";
+        };
+        "type" = {
+          fg = "#ff7d8e";
+        };
+        "function" = {
+          fg = "#a996ff";
+          modifiers = [ "italic" ];
+        };
         "ui.virtual.inlay-hint" = {
           fg = "#636da6";
         };

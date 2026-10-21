@@ -38,6 +38,10 @@
     };
 
     gitlogue.url = "github:unhappychoice/gitlogue";
+
+    happ-nixos.url = "git+https://codeberg.org/VOXEL0798/happ.flake.git";
+    # Необязательно: пусть использует ваш nixpkgs, чтобы не загружать вторую копию
+    happ-nixos.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -62,7 +66,7 @@
           };
           modules = [
             ./profiles/${profile}
-
+            inputs.happ-nixos.nixosModules.default
             {
               nixpkgs.overlays = [
                 inputs.niri.overlays.niri

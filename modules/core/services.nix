@@ -2,6 +2,7 @@
 {
   # Services to start
   services = {
+    happ.enable = true;
     libinput.enable = true; # Input Handling
     fstrim.enable = true; # SSD Optimizer
     gvfs.enable = true; # For Mounting USB & More
@@ -27,6 +28,10 @@
       alsa.support32Bit = true;
       pulse.enable = true;
       wireplumber.enable = true; # Enable WirePlumber session manager
+    };
+
+    hardware = {
+      openrgb.enable = true;
     };
   };
 }

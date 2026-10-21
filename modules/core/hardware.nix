@@ -13,6 +13,7 @@
     keyboard.qmk.enable = false;
     bluetooth.enable = true;
     bluetooth.powerOnBoot = true;
+    opengl.enable = true;
   };
 
   # Udev rules for Corsair devices

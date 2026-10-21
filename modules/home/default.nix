@@ -22,7 +22,7 @@
     ./lazygit.nix
     ./niri
     ./obsidian.nix
-    ./obs-studio.nix
+    # ./obs-studio.nix
     ./qt.nix
     ./scripts
     ./starship.nix
